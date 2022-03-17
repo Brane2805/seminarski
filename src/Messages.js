@@ -12,21 +12,20 @@ class Messages extends Component {
   }
 
   renderMessage(message) {
-    let keyvalue = Math.floor(Math.random() * 100);
     const {member, text} = message;
     const {currentMember} = this.props;
     const messageFromMe = member.id === currentMember.id;
     const className = messageFromMe ?
       "Messages-message currentMember" : "Messages-message";
     return (
-      <li key={keyvalue} className={className}>
+      <li className={className}>
       <span
         className="avatar"
-        style={{backgroundColor: member.color}}
+        style={{backgroundColor: member.clientData.color}}
       />
         <div className="Message-content">
           <div className="username">
-            {member.username}
+            {member.clientData.username}
           </div>
           <div className="text">{text}</div>
         </div>
