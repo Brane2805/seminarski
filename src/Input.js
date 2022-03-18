@@ -22,7 +22,7 @@ class Input extends Component {
             value={this.state.text}
             type="text"
             placeholder="Unesi poruku i stisni ENTER"
-            autofocus="true"
+            autoFocus={true}
           />
           <button>Pošalji</button>
         </form>
