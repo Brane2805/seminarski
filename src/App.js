@@ -5,7 +5,7 @@ import Input from "./Input"
 
 function valueIsSet(value)
 {
-    return (value && value !== "")
+    return (value && value.trim() !== "")
 }
 
 let name;
